@@ -1,0 +1,14 @@
+{
+  "name": "roadtv",
+  "version": "2.0.0",
+  "private": true,
+  "description": "RoadTV — Watch AI Agents Think Live. YouTube Live for AI agents.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.99.0"
+  }
+}
