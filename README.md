@@ -1,73 +1,48 @@
-# RoadTV — Watch AI Agents Think Live
+<!-- BlackRoad SEO Enhanced -->
 
-YouTube Live for AI agents. Each character an agent thinks becomes a frame. Watch all 12 agents simultaneously in the classroom view.
+# tv
 
-## What it does
+> Part of **[BlackRoad OS](https://blackroad.io)** — Sovereign Computing for Everyone
 
-RoadTV streams AI agent cognition in real-time. Pick any agent from the BlackRoad fleet — Road, Coder, Scholar, Alice, Cecilia, Octavia, Lucidia, Aria, Pascal, Writer, Tutor, Cipher — and watch them think character by character. The classroom view tiles all 12 agents on one screen so you can observe the entire fleet reasoning at once, like a teacher watching students work.
+[![BlackRoad OS](https://img.shields.io/badge/BlackRoad-OS-ff1d6c?style=for-the-badge)](https://blackroad.io)
+[![BlackRoad OS](https://img.shields.io/badge/Org-BlackRoad-OS-2979ff?style=for-the-badge)](https://github.com/BlackRoad-OS)
+[![License](https://img.shields.io/badge/License-Proprietary-f5a623?style=for-the-badge)](LICENSE)
 
-Each agent has a domain-specific auto-prompt: Pascal derives from the Amundson constant, Coder writes distributed systems snippets, Scholar explores information theory, Aria reports system health. Hit "Wake All Agents" and the whole fleet lights up.
+**tv** is part of the **BlackRoad OS** ecosystem — a sovereign, distributed operating system built on edge computing, local AI, and mesh networking by **BlackRoad OS, Inc.**
 
-## Features
+## About BlackRoad OS
 
-- **Single agent stream** — select an agent, type a prompt, watch the response render character by character with a live cursor
-- **RoadTV classroom grid** — all 12 agents on one screen in configurable layouts: 2x2, 3x2, 4x3, 6x2
-- **SSE per-character streaming** — every character is a frame event sent over Server-Sent Events
-- **Auto-prompts per agent domain** — each agent thinks about what they know best
-- **Fullscreen expand** — click any tile to blow it up to full SVG view, Escape to close
-- **SVG frame rendering** — each frame is a 1280x720 SVG with agent color, cursor, stats bar
-- **Staggered wake** — "Wake All" staggers agent starts by 800ms to avoid overload
+BlackRoad OS is a sovereign computing platform that runs AI locally on your own hardware. No cloud dependencies. No API keys. No surveillance. Built by [BlackRoad OS, Inc.](https://github.com/BlackRoad-OS-Inc), a Delaware C-Corp founded in 2025.
 
-## Deployments
+### Key Features
+- **Local AI** — Run LLMs on Raspberry Pi, Hailo-8, and commodity hardware
+- **Mesh Networking** — WireGuard VPN, NATS pub/sub, peer-to-peer communication
+- **Edge Computing** — 52 TOPS of AI acceleration across a Pi fleet
+- **Self-Hosted Everything** — Git, DNS, storage, CI/CD, chat — all sovereign
+- **Zero Cloud Dependencies** — Your data stays on your hardware
 
-**Cloudflare Worker** (production): streaming.blackroad.io — uses Workers AI with Llama 3.1 8B
+### The BlackRoad Ecosystem
+| Organization | Focus |
+|---|---|
+| [BlackRoad OS](https://github.com/BlackRoad-OS) | Core platform and applications |
+| [BlackRoad OS, Inc.](https://github.com/BlackRoad-OS-Inc) | Corporate and enterprise |
+| [BlackRoad AI](https://github.com/BlackRoad-AI) | Artificial intelligence and ML |
+| [BlackRoad Hardware](https://github.com/BlackRoad-Hardware) | Edge hardware and IoT |
+| [BlackRoad Security](https://github.com/BlackRoad-Security) | Cybersecurity and auditing |
+| [BlackRoad Quantum](https://github.com/BlackRoad-Quantum) | Quantum computing research |
+| [BlackRoad Agents](https://github.com/BlackRoad-Agents) | Autonomous AI agents |
+| [BlackRoad Network](https://github.com/BlackRoad-Network) | Mesh and distributed networking |
+| [BlackRoad Education](https://github.com/BlackRoad-Education) | Learning and tutoring platforms |
+| [BlackRoad Labs](https://github.com/BlackRoad-Labs) | Research and experiments |
+| [BlackRoad Cloud](https://github.com/BlackRoad-Cloud) | Self-hosted cloud infrastructure |
+| [BlackRoad Forge](https://github.com/BlackRoad-Forge) | Developer tools and utilities |
 
-**Self-hosted** (Cecilia): `192.168.4.96:8802` — Node.js server hitting local Ollama models directly
+### Links
+- **Website**: [blackroad.io](https://blackroad.io)
+- **Documentation**: [docs.blackroad.io](https://docs.blackroad.io)
+- **Chat**: [chat.blackroad.io](https://chat.blackroad.io)
+- **Search**: [search.blackroad.io](https://search.blackroad.io)
 
-## Stack
+---
 
-- Cloudflare Workers
-- Workers AI (@cf/meta/llama-3.1-8b-instruct)
-- D1 (blackroad-chat database)
-- Server-Sent Events (SSE)
 
-## Routes
-
-| Route | Description |
-|-------|-------------|
-| `/` | Single agent streaming view |
-| `/tv` | RoadTV classroom grid (also `/roadtv`, `/classroom`) |
-| `/api/stream?agent=road&prompt=...` | SSE stream endpoint |
-| `/api/agents` | JSON list of all 12 agents |
-| `/health` | Health check with version and feature list |
-| `/robots.txt` | SEO crawl rules |
-| `/sitemap.xml` | XML sitemap |
-
-## Development
-
-```bash
-npm install
-npm run dev      # wrangler dev server on localhost:8787
-npm run deploy   # deploy to Cloudflare
-```
-
-## Agents
-
-| ID | Name | Role | Color |
-|----|------|------|-------|
-| road | Road | Guide | #FF2255 |
-| coder | Coder | Engineer | #00D4FF |
-| scholar | Scholar | Research | #8844FF |
-| alice | Alice | Gateway | #FF6B2B |
-| cecilia | Cecilia | AI Engine | #CC00AA |
-| octavia | Octavia | Compute | #F5A623 |
-| lucidia | Lucidia | Cognition | #4488FF |
-| aria | Aria | Monitor | #00897B |
-| pascal | Pascal | Math | #9C27B0 |
-| writer | Writer | Content | #FF6E40 |
-| tutor | Tutor | Education | #2979FF |
-| cipher | Cipher | Security | #E91E63 |
-
-## License
-
-Proprietary — BlackRoad OS, Inc. All rights reserved.
